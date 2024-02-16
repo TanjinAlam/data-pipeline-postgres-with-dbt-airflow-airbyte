@@ -61,7 +61,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    user: root
     depends_on:
       - postgres
     extra_hosts:
@@ -87,7 +86,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    user: root
     depends_on:
       - postgres
     extra_hosts:

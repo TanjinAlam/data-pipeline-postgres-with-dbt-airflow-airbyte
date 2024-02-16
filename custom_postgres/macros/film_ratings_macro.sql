@@ -12,7 +12,7 @@ WITH films_with_ratings AS (
             WHEN  user_rating  >= 4.5 THEN 'Excellent'
             WHEN  user_rating  >= 4.0 THEN 'Good'
             WHEN  user_rating  >= 3.0 THEN 'Average'
-        ELSE 'Poor'
+            ELSE 'Poor'
         END as rating_category
     FROM {{ ref('films') }}  -- Using dbt's ref function to reference the films table
 ),
